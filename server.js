@@ -1,9 +1,23 @@
 const express = require("express");
 require("dotenv").config();
 const app = express();
+const connectDB = require("./src/db/connectDB");
+
 const port = process.env.PORT || 5000;
 
+// require routes
+const authRoutes = require('./src/routes/v1/authRoutes/authRoutes')
+const productsRoutes = require('./src/routes/v1/productsRoutes/productsRoutes')
+const categoriesRoutes = require('./src/routes/v1/categoryRoutes/categoryRoutes');
+const applyMiddleware = require("./src/middlewares/applyMiddleware");
 
+// middleware
+applyMiddleware(app);
+
+// use routes
+app.use(authRoutes);
+app.use(productsRoutes);
+app.use(categoriesRoutes);
 
 
 app.get("/", (req, res) => {
@@ -26,6 +40,8 @@ app.use((err, req, res, next) => {
 })
 
 const main = async () => {
+    await connectDB();
+
     app.listen(port, () => {
         console.log(`Server is running on port ${port}`);
     });
