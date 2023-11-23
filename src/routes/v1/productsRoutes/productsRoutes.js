@@ -1,4 +1,4 @@
-const { getAllProducts, getSingleProduct, updateProduct, addProduct, getCategoryProducts, deleteProduct } = require('../../../lib/products');
+const { getAllProducts, getSingleProduct, getCategoryProducts, addProduct, updateProduct, deleteProduct } = require('../../../api/v1/controllers/productsController');
 
 const router = require('express').Router();
 

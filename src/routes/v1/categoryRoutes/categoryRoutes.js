@@ -1,4 +1,4 @@
-const { getAllCategories, getSingleCategory } = require('../../../lib/categories');
+const { getAllCategories, getSingleCategory } = require('../../../api/v1/controllers/categoriesController');
 
 const router = require('express').Router();
 

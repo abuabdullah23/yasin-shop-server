@@ -1,4 +1,4 @@
-const ProductModel = require("../../models/dashboard/ProductModel");
+const ProductModel = require("../../../../models/dashboard/ProductModel");
 
 // http://localhost:5000/get-category-products?slug=rice //to get category wise products
 const getCategoryProducts = async (req, res) => {

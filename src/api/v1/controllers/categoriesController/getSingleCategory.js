@@ -1,4 +1,4 @@
-const CategoryModel = require("../../models/dashboard/CategoryModel");
+const CategoryModel = require("../../../../models/dashboard/CategoryModel");
 
 const getSingleCategory = async (req, res) => {
     const categoryId = req.params.id;

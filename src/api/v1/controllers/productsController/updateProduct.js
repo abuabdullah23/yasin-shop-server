@@ -1,4 +1,4 @@
-const ProductModel = require("../../models/dashboard/ProductModel");
+const ProductModel = require("../../../../models/dashboard/ProductModel");
 
 const updateProduct = async (req, res) => {
     const { name, categoryId, brand, stock, price, discount, description, image } = req.body;

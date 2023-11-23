@@ -1,5 +1,6 @@
 // get all categories, sort by title name 
-const CategoryModel = require("../../models/dashboard/CategoryModel");
+
+const CategoryModel = require("../../../../models/dashboard/CategoryModel");
 
 const getAllCategories = async (req, res) => {
     const query = {}
